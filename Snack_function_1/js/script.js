@@ -3,7 +3,7 @@
  */
 
 function getRandomNumbers (numMin, numMax) {
-    const randomNumber = Math.floor ( Math.random () * ( numMax - numMin ) + numMin );
+    const randomNumber = Math.floor ( Math.random () * ( numMax - numMin + 1 ) + numMin );
     return randomNumber;
 }
 

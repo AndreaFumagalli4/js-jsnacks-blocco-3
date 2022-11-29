@@ -4,21 +4,21 @@
  *
  */
 
-const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 function getSumOfArrayElement (array) {
-    // se gli elementi non sono un numero non li sommo
-    
+
     let sum = 0;
 
     for ( let i = 0; i < array.length; i++ ) {
-        if (array[i] == Number.isNaN) {
-            return array;
+        
+        const castedElement = parseInt( array[i], 10 );
+        // Uso il ! per la negazione (se castedElement è un numero) ==> sommalo.
+        if ( ! Number.isNaN(castedElement) ) { 
+            sum = sum + castedElement;
         }
-        sum += array[i];
     }
     return sum;
 }
 
-let sumArrayElement = getSumOfArrayElement(list);
-console.log(sumArrayElement);
+const list = ['ciao', '22', 2, 3, 4, 5, 'Gino', '10'];
+
+console.log(getSumOfArrayElement(list));

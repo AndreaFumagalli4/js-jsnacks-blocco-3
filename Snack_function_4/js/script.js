@@ -10,9 +10,13 @@ const startingList = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
 
 const newList = [];
 
-for ( let i = 0; i < 10; i++) {
-    let newNumber = Math.floor ( Math.random () * ( (startingList.length - 1) - startingList[0] + 1 ) + startingList[0] );
-    newList.push(newNumber);
+while ( newList.length < 10 ) {
+    // mettere funzione per generare numeri randomici
+    let newNumber = Math.floor ( Math.random () * ( (startingList.length - 1) - 0 + 1 ) + 0 );
+
+    if (!newList.includes(startingList[newNumber]) ) {
+        newList.push(startingList[newNumber]);
+    }
 }
 
 console.log(newList);
